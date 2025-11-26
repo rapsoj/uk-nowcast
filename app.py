@@ -13,7 +13,7 @@ import math
 import numpy as np
 
 # Main: only show map (no right-hand panel)
-st.title("UK Nowcast Model (2026 General Elections)")
+st.title("UK Nowcast Model (General Elections)")
 st.subheader("Simulating optimal Your Party strategies to avoid left vote splitting.")
 
 # Configuration
