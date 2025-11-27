@@ -528,11 +528,12 @@ with st.expander("Constituency details"):
                 table_rows.append((p, votes_abs, f"{pct:.1%}"))
 
             df_dbg = pd.DataFrame(table_rows, columns=["Party", "Absolute votes", "Percent total votes"])
+            yp_votes = _safe_int_from_val(row.get("_votes_YOUR", new_your_votes), default=new_your_votes)
             st.markdown(f"**Constituency:** {row.get(constituency_col, selected_slug)}")
             st.write(f"Electorate: {electorate:,}")
             st.write(f"Turnout: {turnout + input_frac:.2%}  →  Voters: {new_total_votes:,}")
             st.write(f"Non-voters: {electorate - new_total_votes:,}")
-            st.write(f"Total Your Party votes: {desired_your:,}")
+            st.write(f"Total Your Party votes: {yp_votes:,}")
             st.dataframe(df_dbg, width='content')
 
             # --------------------------
