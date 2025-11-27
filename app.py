@@ -674,3 +674,5 @@ if selected_constituency:
     if centroid is not None:
         cx, cy = centroid
         fig.update_layout(annotations=[dict(x=cx, y=cy, text=f"<b>{selected_constituency}</b>", showarrow=True, arrowhead=2, ax=20, ay=-20)])
+
+st.markdown("To get in contact and request additional analysis, contact jessica.rapson@stats.oc.ac.uk", unsafe_allow_html=False, *, help=None, width="stretch")
