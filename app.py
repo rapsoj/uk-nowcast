@@ -13,7 +13,7 @@ import math
 import numpy as np
 
 # Main: only show map (no right-hand panel)
-st.title("UK Nowcast Model (2026 General Elections)")
+st.title("UK Nowcast Model (General Elections)")
 st.subheader("Simulating optimal Your Party strategies to avoid left vote splitting.")
 
 # Configuration
@@ -21,7 +21,7 @@ DATA_DIR = Path("data")
 HEXJSON_PATH = DATA_DIR / "uk-constituencies-2024.hexjson"
 NOWCAST_PATH = DATA_DIR / "nowcast.csv"
 
-st.set_page_config(layout="wide", page_title="UK Nowcast Model (2026 General Elections)", initial_sidebar_state="expanded")
+st.set_page_config(layout="wide", page_title="UK Nowcast Model (General Elections)", initial_sidebar_state="expanded")
 
 # Load and validate data
 if not HEXJSON_PATH.exists():
